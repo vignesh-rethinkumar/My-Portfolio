@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-mark">VR</span>
+    <span>Vignesh R.</span>
+  </div>
+  <nav>
+    <a href="#home" onclick="navigateTo('home')">Home</a>
+    <a href="#about" onclick="navigateTo('about')">About Me</a>
+    <a href="#skills" onclick="navigateTo('skills')">Skills</a>
+    <a href="#projects" onclick="navigateTo('projects')">Projects</a>
+    <a href="#education" onclick="navigateTo('education')">Education</a>
+    <a href="#contact" onclick="navigateTo('contact')">Contact</a>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <p class="breadcrumb">← Undergraduate Portfolio</p>
+    <h1>Hi, I'm Vignesh Rethinakumar</h1>
+    <p class="hero-subtitle">BCA Student | Aspiring Software Developer</p>
+    <p class="hero-description">
+      I am currently pursuing my Bachelor of Computer Applications (BCA) and building my foundation in programming, core computer science concepts, and frontend development. I enjoy learning how software works and turning concepts into simple, functional code.
+    </p>
+    <div class="button-group">
+      <button class="btn btn-primary" onclick="navigateTo('projects')">View Projects</button>
+      <button class="btn btn-secondary" onclick="navigateTo('contact')">Contact Me</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-header">
+      <p class="section-label">01 / About</p>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-box">
+      <p>I am a BCA student at Mount Carmel College, Bangalore. I have a keen interest in software development and web development, focusing on building clean user interfaces and understanding how software systems operate under the hood.</p>
+      <p>As an undergraduate, I spend my time practicing core programming problems, working on small hands-on academic projects, and learning best practices for clean, readable code.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-header">
+      <p class="section-label">02 / Technical Skills</p>
+      <h2 class="section-title">Skills</h2>
+      <p class="section-description">Languages, tools, and platforms studied during my coursework and self-practice.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <span class="skill-dot blue"></span>
+          <h3>Programming</h3>
+        </div>
+        <div class="skill-items">
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <span class="skill-dot teal"></span>
+          <h3>Web</h3>
+        </div>
+        <div class="skill-items">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">Bootstrap</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <span class="skill-dot orange"></span>
+          <h3>Database</h3>
+        </div>
+        <div class="skill-items">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">T-SQL</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <span class="skill-dot purple"></span>
+          <h3>Tools</h3>
+        </div>
+        <div class="skill-items">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">MySQL Workbench</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-header">
+      <p class="section-label">03 / Work</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-description">Hands-on student projects built during my coursework and practice.</p>
+    </div>
+    <div class="projects-filter">
+      <button class="filter-btn active" onclick="filterProjects('all')">All (2)</button>
+      <button class="filter-btn" onclick="filterProjects('python')">Python</button>
+      <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+    </div>
+
+    <div class="project-card" data-category="python">
+      <span class="project-tag">Console Application</span>
+      <h3>Library Management System</h3>
+      <p class="project-tech">Python · MySQL</p>
+      <p class="project-description">
+        A beginner-friendly Library Management System developed using Python and MySQL to manage book records using CRUD operations. This project runs as a command-line terminal application communicating directly with a MySQL database.
+      </p>
+      <div class="project-features">
+        <div class="project-features-title">KEY FEATURES:</div>
+        <ul>
+          <li>Add books to repository</li>
+          <li>View existing books</li>
+          <li>Update book records</li>
+          <li>Delete books</li>
+          <li>MySQL database connectivity</li>
+        </ul>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/vignesh-rethinkumar/library_management.git" target="_blank" class="project-link-btn">
+          <span>🔗</span> GitHub (Console App)
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="web">
+      <span class="project-tag">Frontend Only</span>
+      <h3>Facebook-Inspired Frontend UI</h3>
+      <p class="project-tech">HTML · CSS · JavaScript</p>
+      <p class="project-description">
+        A frontend-only social media interface inspired by Facebook, created to practice HTML structure, CSS styling, and basic JavaScript interaction.
+      </p>
+      <div class="project-features">
+        <div class="project-features-title">SCOPE NOTICE:</div>
+        <ul>
+          <li>This project is strictly frontend only with no backend, database, or authentication.</li>
+          <li>Uses clean HTML markup, responsive CSS, and a little JavaScript for toggle and UI layout practice.</li>
+        </ul>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/vignesh-rethinkumar/facebook_clone.git" target="_blank" class="project-link-btn">
+          <span>🔗</span> GitHub Code
+        </a>
+        <a href="#" class="project-link-btn">
+          <span>↗</span> Live Demo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Section -->
+  <section id="learning">
+    <div class="section-header">
+      <p class="section-label">04 / Roadmap</p>
+      <h2 class="section-title">Currently Learning</h2>
+      <p class="section-description">Topics and concepts I am actively exploring, practicing, and developing alongside my coursework.</p>
+    </div>
+    <div class="learning-grid">
+      <div class="learning-card">
+        <div class="learning-icon">📚</div>
+        <h3>Backend Development</h3>
+        <p>Exploring server architecture, handling HTTP requests, and basic API concepts.</p>
+      </div>
+      <div class="learning-card">
+        <div class="learning-icon">🔗</div>
+        <h3>Data Structures and Algorithms (DSA)</h3>
+        <p>Practicing problem-solving fundamentals, arrays, linked lists, and basic sorting algorithms.</p>
+      </div>
+      <div class="learning-card">
+        <div class="learning-icon">⚡</div>
+        <h3>AI Tools</h3>
+        <p>Understanding modern AI development tools and how they assist productivity in coding.</p>
+      </div>
+      <div class="learning-card">
+        <div class="learning-icon">🖥️</div>
+        <h3>Computer Architecture</h3>
+        <p>Studying hardware organization, CPU pipelining, and low-level computer operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <div class="section-header">
+      <p class="section-label">05 / Background</p>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="education-item">
+      <div class="education-left">
+        <h3>BCA — Bachelor of Computer Applications</h3>
+        <p>Mount Carmel College, Bangalore</p>
+      </div>
+      <div class="education-right">2025 – Present</div>
+    </div>
+    <div class="education-item">
+      <div class="education-left">
+        <h3>12th Grade (Higher Secondary)</h3>
+        <p>Vidhyaa Vikas International School, Thanjavur</p>
+      </div>
+      <div class="education-right">Computer Science Stream</div>
+    </div>
+    <div class="education-item">
+      <div class="education-left">
+        <h3>10th Grade (Secondary Education)</h3>
+        <p>Dr. G. S. Kalyanasundaram Memorial School, Kumbakonam</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-header">
+      <p class="section-label">06 / Connect</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-description">Feel free to reach out for student collaborations, learning discussions, or inquiries.</p>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-left">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <h3>Email Address</h3>
+          <p>vigneshrethinakumar@gmail.com</p>
+        </div>
+      </div>
+      <div class="contact-action">
+        <button class="contact-btn" id="copyEmailBtn">📋 Copy Email</button>
+        <button class="contact-btn primary" onclick="window.location.href='mailto:vigneshrethinakumar@gmail.com'">Send Email</button>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-left">
+        <div class="contact-icon">🐙</div>
+        <div class="contact-info">
+          <h3>GitHub</h3>
+          <p>View code repositories</p>
+        </div>
+      </div>
+      <div class="contact-action">
+       <a href="https://github.com/vignesh-rethinkumar" target="_blank" class="contact-btn">
+        → Open GitHub
+       </a>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-left">
+        <div class="contact-icon">💼</div>
+        <div class="contact-info">
+          <h3>LinkedIn</h3>
+          <p>Connect professionally</p>
+        </div>
+      </div>
+      <div class="contact-action">
+        <a href="https://www.linkedin.com/in/vignesh-rethinakumar-65a44a3a7/" target="_blank" class="contact-btn">
+          → View Profile
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Send me a Message</h3>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Vignesh Rethinakumar</p>
+  <p>Built with HTML, CSS & JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
